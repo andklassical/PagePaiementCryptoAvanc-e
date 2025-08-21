@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Paiement Sécurisée</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1.5em;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #004080;
+    }
+    .instructions {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .code-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eaf2ff;
+      border: 2px solid #004080;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #004080;
+      margin: 20px 0;
+    }
+    .copy-btn {
+      background: #0073e6;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .copy-btn:hover {
+      background: #005bb5;
+    }
+    .wallet-box {
+      background: #f0fff4;
+      border: 2px solid #2f855a;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 20px 0;
+      font-size: 16px;
+      color: #22543d;
+      font-weight: bold;
+    }
+    .btn-confirm {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #006400;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .btn-confirm:hover {
+      background: #004d00;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paiement Sécurisé</h1>
+    <p>Veuillez suivre attentivement les instructions ci-dessous</p>
+  </header>
+  <main>
+    <h2>Instructions de Paiement</h2>
+    <div class="instructions">
+      <p>1️⃣ Envoyez le montant exact à l’adresse indiquée ci-dessous.</p>
+      <p>2️⃣ Utilisez le code ci-dessous comme référence obligatoire lors de votre inscription.</p>
+    </div>
+
+    <!-- FIRST CODE DISPLAY -->
+    <div class="code-box">
+      <span>12345</span>
+      <button class="copy-btn" onclick="copyCode()">Copier</button>
+    </div>
+
+    <div class="wallet-box">
+      Adresse de paiement BTC :  
+      <br>
+      <strong>bc1qzkd2k6ydt3hm9zjz8znmsdclcvyuhp4v59lfj8</strong>
+    </div>
+
+    <a href="https://www.coinsarchive.net/register" class="btn-confirm">
+      Confirmer et Aller à l'Inscription
+    </a>
+
+    <div class="instructions">
+      <p><strong>⚠ Remarque importante :</strong> Après confirmation du paiement, votre inscription sera validée automatiquement.</p>
+    </div>
+
+    <!-- SECOND CODE DISPLAY RIGHT UNDER CONFIRMATION -->
+    <div class="code-box">
+      <span>12345</span>
+      <button class="copy-btn" onclick="copyCode()">Copier</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Global Digital Investment. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function copyCode() {
+      navigator.clipboard.writeText("12345").then(function() {
+        alert("Code copié avec succès !");
+      }, function() {
+        alert("Impossible de copier le code. Essayez manuellement.");
+      });
+    }
+  </script>
+</body>
+</html>
